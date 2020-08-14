@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     public boolean isUnique(String astr) {
         int mark = 0;
@@ -11,8 +13,31 @@ class Solution {
         }
         return true;
     }
+
+    public boolean isUniqueMap(String astr) {
+        HashMap<Character, Integer> result = new HashMap<>();
+        for (int i = 0; i < astr.length(); i++)
+        {
+            int count = result.getOrDefault(astr.charAt(i), 0) + 1;
+            if (count > 1) {return false;}
+            result.put(astr.charAt(i), count);
+        }
+        return true;
+
+        // for (Map.Entry<Character, Integer> entry : result.entrySet())
+        // {
+        //     if (entry.getValue() != 1)
+        //     {
+        //         return false;
+        //     }
+        // }
+        // return true;
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.isUnique("isUnique"));
+        String teststr = new String("isjjkq");
+        System.out.println(solution.isUnique(teststr));
+        System.out.println(solution.isUniqueMap(teststr));
     }
 }

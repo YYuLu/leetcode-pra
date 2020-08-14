@@ -9,7 +9,16 @@ class Solution():
                 mark |= (1 << move_bit)
         return True
 
+    def isUniqueSet(self,astr:str) -> bool:
+        sets = set(astr)
+        if len(astr) == len(sets):
+            return True
+        else:
+            return False
+
 
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.isUnique("isnque"))
+    teststr = "inds"
+    print(solution.isUnique(teststr))
+    print(solution.isUniqueSet(teststr))
