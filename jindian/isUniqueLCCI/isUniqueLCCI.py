@@ -9,7 +9,7 @@ class Solution():
                 mark |= (1 << move_bit)
         return True
 
-    def isUniqueSet(self,astr:str) -> bool:
+    def isUniqueSet(self, astr: str) -> bool:
         sets = set(astr)
         if len(astr) == len(sets):
             return True
