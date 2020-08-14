@@ -36,8 +36,9 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String teststr = new String("isjjkq");
-        System.out.println(solution.isUnique(teststr));
-        System.out.println(solution.isUniqueMap(teststr));
+        long startTime = System.currentTimeMillis();
+        System.out.println(solution.isUnique("isUnique"));
+        long endTime = System.currentTimeMillis();
+        System.out.println("程序运行时间：" + (endTime - startTime) + "ms"); 
     }
 }
