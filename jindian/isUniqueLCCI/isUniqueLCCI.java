@@ -1,3 +1,5 @@
+package jindian.isUniqueLCCI;
+
 import java.util.HashMap;
 
 class Solution {
