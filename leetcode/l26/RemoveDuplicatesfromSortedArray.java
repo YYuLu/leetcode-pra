@@ -24,7 +24,7 @@ public class RemoveDuplicatesfromSortedArray {
       }
     }
 
-    System.out.println("处理后的数组为：" + Arrays.toString(Arrays.copyOfRange(nums, 0, i + 1)) + " 长度为：" + (i + 1)); //copyOfRange方法返回的下标不包含参数中的“to”代表的下标
+    System.out.println("处理后的数组为：" + Arrays.toString(Arrays.copyOfRange(nums, 0, i + 1)) + "，长度为：" + (i + 1)); //copyOfRange方法返回的下标不包含参数中的“to”代表的下标
     return i + 1;
   }
 }
